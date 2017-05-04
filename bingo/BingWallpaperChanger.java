@@ -69,7 +69,7 @@ public class BingWallpaperChanger {
 
                 while ((inputLine = in.readLine()) != null) {
                     response.append(inputLine);
-                    //System.out.println(inputLine);
+                    System.out.println(inputLine);
                 }
                 in.close();
 
@@ -81,7 +81,7 @@ public class BingWallpaperChanger {
                 if (position != -1) {
                     String newString = stringToSearch.substring(position + 14);
                     int posend = newString.indexOf("\"");
-                    String urlimg = "http://" + newString.substring(1, posend); //Substring of URL till "
+                    String urlimg = url + newString.substring(0, posend); //Substring of URL till "
 
                     String imagename = urlimg.substring(urlimg.lastIndexOf("/") + 1); //Save as image name
                     System.out.println("\nImage name: " + imagename);
